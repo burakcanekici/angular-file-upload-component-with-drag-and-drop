@@ -1,0 +1,15 @@
+<ng-container [formGroup]="parentForm">
+	<mat-form-field style="display: none">
+		<input matInput formControlName="formID">
+    </mat-form-field>
+		<mat-form-field style="display: none">
+			<input matInput formControlName="{{itemIDSpesification}}">
+    </mat-form-field>
+			<mat-form-field>
+				<input matInput formControlName="{{itemDefSpesification}}" placeholder="{{placeHolderText}}" [readonly]="true"
+            (change)="changeFile($event.target.files)">
+				<button mat-button type="button" matSuffix mat-icon-button aria-label="Upload" (click)="openModal()">
+            <mat-icon>search</mat-icon>
+        </button>
+			</mat-form-field>
+</ng-container>

@@ -1,0 +1,8 @@
+<file-upload-fetch #childUpload [parentForm]="fileUploadFormGroup"
+	(afterSelectionMethod)="afterUploadFile($event)" [selectedFilesShow]="true">
+</file-upload-fetch>
+<mat-dialog-actions align="end">
+	<button mat-raised-button color="primary" (click)="fetchFilesFromComponent(childUpload.files)">
+        Seç
+    </button>
+</mat-dialog-actions>
